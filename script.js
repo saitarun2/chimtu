@@ -1,13 +1,48 @@
-// Get the current year for the footer
-const currentYear = new Date().getFullYear();
-const footer = document.querySelector('footer p');
-footer.innerHTML = `&copy; ${currentYear} My Website. All rights reserved.`;
 
-// Add active class to the current page link in the navigation
-const links = document.querySelectorAll('nav ul li a');
-for (let i = 0; i < links.length; i++) {
-  if (links[i].href === window.location.href) {
-    links[i].classList.add('active');
+const input = document.getElementById('task');
+const ul = document.getElementById('tasks');
+const box = document.getElementById('checkbox');
+
+function addtask() {
+  if (input.value.length === 0) {
+    alert('type something');
+  } else {
+    let task = input.value;
+    let li = document.createElement('li');
+    let checkbox = document.createElement('input');
+    let label = document.createElement('label');
+    checkbox.type = 'checkbox';
+    label.for = task;
+    label.innerText = task;
+    li.appendChild(checkbox);
+    checkbox.id = 'checkbox';
+    li.appendChild(label);
+    ul.appendChild(li);
+    if (checkbox.checked) {
+      label.innerHTML.value = '<s>' + value + '</s>'
+    }
+    console.log
+    input.value = '';
+    savedata();
   }
 }
 
+function deletetask() {
+  const checkboxes = document.querySelectorAll('#tasks input[type="checkbox"]');
+  checkboxes.forEach(function (checkbox) {
+    if (checkbox.checked) {
+      const li = checkbox.parentNode;
+      ul.removeChild(li);
+    }
+  });
+  savedata();
+}
+
+function savedata() {
+  localStorage.setItem('data', ul.innerHTML)
+}
+
+function showtask() {
+  ul.innerHTML = localStorage.getItem('data');
+}
+showtask();
