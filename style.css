@@ -78,7 +78,6 @@ ul{
         
     }
     
-=======
 .body{
     padding: 0;
     margin: 0;
@@ -93,11 +92,7 @@ ul{
     background-color: goldenrod;
     min-width: 5rem;
 }
-p{
-    margin: 0;
-    font-size: 2rem ;
-    color: green;
-  }
+
 
 li{
     list-style-type: none;
@@ -154,5 +149,4 @@ ul{
         height: 100%;
         
     }
-    
- }
+}}
