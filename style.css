@@ -41,13 +41,6 @@ ul{
     cursor: pointer;
 }
 
-#t1{
-    margin-left: .5rem;
-    background-color: transparent;
-    border: none;
-}
 
-input :hover{
-    background-color: white;
-    cursor: pointer;
-}
+  
+ 
