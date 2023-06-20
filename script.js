@@ -4,24 +4,21 @@ const ul = document.getElementById('tasks');
 const box = document.getElementById('checkbox');
 
 function addtask() {
-  if (input.value.trim().length === 0) {
+  if (input.value.length === 0) {
     alert('type something');
   } else {
     let task = input.value;
     let li = document.createElement('li');
     let checkbox = document.createElement('input');
     let label = document.createElement('label');
-    let t1 = document.createElement('input');
 
-    t1.type = 'text';
+
     checkbox.type = 'checkbox';
     label.for = task;
+    label.innerText = task;
     li.appendChild(checkbox);
     checkbox.id = 'checkbox';
     li.appendChild(label);
-    t1.id = 't1'
-    label.appendChild(t1)
-    t1.value = task;
     ul.appendChild(li);
     input.value = '';
     savedata();
