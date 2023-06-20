@@ -17,11 +17,7 @@
     background-color: goldenrod;
     min-width: 5rem;
 }
-/* p{
-    margin: 0;
-    font-size: 2rem ;
-    color: green;
-  } */
+
 
 li{
     list-style-type: none;
@@ -136,7 +132,7 @@ ul{
  }
 
 
- @media screen and (max-width:390px) {
+ @media screen and (max-width:425px) {
     html{
         height: 100%;
     }
