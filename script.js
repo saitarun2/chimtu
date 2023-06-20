@@ -4,15 +4,13 @@ const ul = document.getElementById('tasks');
 const box = document.getElementById('checkbox');
 
 function addtask() {
-  if (input.value.length === 0) {
+  if (input.value.trim().length === 0) {
     alert('type something');
   } else {
     let task = input.value;
     let li = document.createElement('li');
     let checkbox = document.createElement('input');
     let label = document.createElement('label');
-
-
     checkbox.type = 'checkbox';
     label.for = task;
     label.innerText = task;
